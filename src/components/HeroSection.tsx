@@ -22,7 +22,7 @@ const HeroSection = () => {
             className="space-y-6"
           >
             <div className="inline-flex items-center gap-2 rounded-full bg-accent/20 border border-accent/30 px-4 py-1.5 text-sm font-bold text-accent font-heading">
-              ⭐ 59 Five-Star Google Reviews
+              ⭐ 50+ Five-Star Google Reviews
             </div>
 
             <h1 className="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-[3.25rem] font-extrabold leading-[1.1] text-primary-foreground">
