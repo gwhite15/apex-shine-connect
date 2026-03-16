@@ -2,7 +2,7 @@ import { Star } from "lucide-react";
 import { motion } from "framer-motion";
 
 const reviews = [
-  { name: "Griffin's Client", loc: "Maple Ridge", text: "Apex Pressure Washing did an awesome job on our driveway and house wash here in Maple Ridge. Griffin was professional and the results were incredible." },
+  { name: "Bill Kibbins", loc: "Maple Ridge", text: "Apex Pressure Washing did an awesome job on our driveway and house wash here in Maple Ridge. Griffin was professional and the results were incredible." },
   { name: "Sarah M.", loc: "Maple Ridge", text: "Our home looks brand new! The siding was covered in green algae and they made it spotless. Fast, professional, and incredible attention to detail." },
   { name: "David K.", loc: "Pitt Meadows", text: "Same-day response and the results blew us away. Our driveway and patio look like they were just poured. Will definitely be calling again." },
   { name: "Jennifer L.", loc: "Port Coquitlam", text: "We had moss all over our roof and walkways. Apex removed every bit of it and our home looks amazing. Worth every penny!" },
