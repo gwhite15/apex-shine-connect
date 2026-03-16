@@ -28,7 +28,7 @@ const ReviewsSection = () => (
             {[...Array(5)].map((_, i) => <Star key={i} className="h-5 w-5 fill-accent text-accent" />)}
           </div>
           <span className="font-heading font-bold text-foreground">5.0</span>
-          <span className="text-muted-foreground text-sm">from 59 Google Reviews</span>
+          <span className="text-muted-foreground text-sm">from 50+ Google Reviews</span>
         </div>
       </motion.div>
 
