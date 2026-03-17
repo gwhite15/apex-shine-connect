@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
-import { Home, Star, ThumbsUp, Clock } from "lucide-react";
+import { GraduationCap, Star, ThumbsUp, Clock } from "lucide-react";
 
 const useCountUp = (end: number, duration = 2000) => {
   const [count, setCount] = useState(0);
