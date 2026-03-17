@@ -33,7 +33,7 @@ const useCountUp = (end: number, duration = 2000) => {
 };
 
 const stats = [
-  { icon: Home, value: 500, suffix: "+", label: "Homes Cleaned" },
+  { icon: Home, value: 0, suffix: "", label: "Student Led" },
   { icon: Star, value: 50, suffix: "+", label: "5-Star Reviews" },
   { icon: ThumbsUp, value: 100, suffix: "%", label: "Satisfaction Rate" },
   { icon: Clock, value: 24, suffix: "hr", label: "Response Time" },
