@@ -57,22 +57,6 @@ const HeroSection = () => {
             </div>
           </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, x: 40 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.7, delay: 0.2 }}
-            className="hidden lg:block"
-          >
-            <div className="rounded-2xl overflow-hidden shadow-2xl">
-              <BeforeAfterSlider
-                beforeSrc={baHouseWash}
-                afterSrc={baHouseWash}
-                beforeAlt="Dirty house siding before pressure washing"
-                afterAlt="Clean house siding after pressure washing"
-                className="aspect-[4/3]"
-              />
-            </div>
-          </motion.div>
         </div>
       </div>
     </section>
