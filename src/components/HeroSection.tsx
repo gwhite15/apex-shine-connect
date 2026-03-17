@@ -1,8 +1,6 @@
 import { Phone, MessageSquare, ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 import heroImg from "@/assets/hero-bg.jpg";
-import baHouseWash from "@/assets/ba-house-wash.png";
-import BeforeAfterSlider from "./BeforeAfterSlider";
 
 const HeroSection = () => {
   return (
