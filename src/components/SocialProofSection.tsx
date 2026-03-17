@@ -62,8 +62,9 @@ const SocialProofSection = () => {
               <p className="font-heading text-3xl md:text-4xl font-extrabold text-primary-foreground">
                 {s.value === 0 ? s.label : `${counters[i].count}${s.suffix}`}
               </p>
-              </p>
-              <p className="text-primary-foreground/70 text-sm font-medium mt-1">{s.label}</p>
+              {s.value !== 0 && (
+                <p className="text-primary-foreground/70 text-sm font-medium mt-1">{s.label}</p>
+              )}
             </motion.div>
           ))}
         </div>
