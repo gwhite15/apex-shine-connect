@@ -1,14 +1,34 @@
 import { Send, Phone, Clock } from "lucide-react";
 import { useState } from "react";
 import { motion } from "framer-motion";
+import { supabase } from "@/integrations/supabase/client";
+import { useToast } from "@/hooks/use-toast";
 
 const QuoteFormSection = () => {
   const [formData, setFormData] = useState({ name: "", phone: "", email: "", city: "", service: "", message: "" });
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const { toast } = useToast();
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
+    setLoading(true);
+    try {
+      const { data, error } = await supabase.functions.invoke("send-quote", {
+        body: formData,
+      });
+      if (error) throw error;
+      setSubmitted(true);
+    } catch (err: any) {
+      console.error("Quote submission error:", err);
+      toast({
+        title: "Something went wrong",
+        description: "Please try again or call us directly.",
+        variant: "destructive",
+      });
+    } finally {
+      setLoading(false);
+    }
   };
 
   const inputClass = "w-full rounded-xl border border-input bg-background px-4 py-3.5 text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-ring font-body";
@@ -98,10 +118,11 @@ const QuoteFormSection = () => {
                 </div>
                 <button
                   type="submit"
-                  className="w-full rounded-xl py-4 font-heading text-base font-bold text-primary-foreground transition-all hover:scale-[1.02]"
+                  disabled={loading}
+                  className="w-full rounded-xl py-4 font-heading text-base font-bold text-primary-foreground transition-all hover:scale-[1.02] disabled:opacity-60 disabled:cursor-not-allowed"
                   style={{ background: "var(--gradient-cta)", boxShadow: "var(--shadow-cta)", color: "hsl(0,0%,100%)" }}
                 >
-                  Get My Free Quote →
+                  {loading ? "Sending..." : "Get My Free Quote →"}
                 </button>
               </form>
             )}
