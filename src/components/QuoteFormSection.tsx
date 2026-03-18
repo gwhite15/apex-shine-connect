@@ -118,10 +118,11 @@ const QuoteFormSection = () => {
                 </div>
                 <button
                   type="submit"
-                  className="w-full rounded-xl py-4 font-heading text-base font-bold text-primary-foreground transition-all hover:scale-[1.02]"
+                  disabled={loading}
+                  className="w-full rounded-xl py-4 font-heading text-base font-bold text-primary-foreground transition-all hover:scale-[1.02] disabled:opacity-60 disabled:cursor-not-allowed"
                   style={{ background: "var(--gradient-cta)", boxShadow: "var(--shadow-cta)", color: "hsl(0,0%,100%)" }}
                 >
-                  Get My Free Quote →
+                  {loading ? "Sending..." : "Get My Free Quote →"}
                 </button>
               </form>
             )}
